@@ -18,10 +18,6 @@ app.get('/about', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'about.html'));
 });
 
-app.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'contact.html'));
-});
-
 // New route to list all files in /public
 app.get('/blog', (req, res) => {
   const directoryPath = path.join(__dirname, 'public/blogposts');
@@ -38,24 +34,10 @@ app.get('/blog', (req, res) => {
     res.send(`
       <html>
         <head>
-          <style>
-            body {
-              margin: 0;
-              height: 100vh;
-              flex-direction: column;
-              padding: 40px 40px;
-              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            }
-
-            ul {
-              list-style-type: none;
-              padding: 0;
-              margin: 0;
-            }
-          </style>
+          <link href="/styles.css" rel="stylesheet" />
         </head>
-        <body>
-          <h1>Blog posts</h1>
+        <body class="blog">
+          <h1>blog posts</h1>
           <ul>${fileLinks}</ul>
         </body>
       </html>
