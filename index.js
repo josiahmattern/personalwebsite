@@ -1,25 +1,27 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const favicon = require('serve-favicon');
 
 const app = express();
 
 // Use the port from the environment (or default to 3000 locally)
 const PORT = process.env.PORT || 3000;
 
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Main routes
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get('/about', (req, res) => {
+app.get('/about', (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'about.html'));
 });
 
 // New route to list all files in /public
-app.get('/blog', (req, res) => {
+app.get('/blog', (_req, res) => {
   const directoryPath = path.join(__dirname, 'public/blogposts');
 
   fs.readdir(directoryPath, (err, files) => {
@@ -38,7 +40,8 @@ app.get('/blog', (req, res) => {
         </head>
         <body class="blog">
           <h1>blog posts</h1>
-          <ul>${fileLinks}</ul>
+					<p>coming soon...</p>
+          <!-- <ul>${fileLinks}</ul> -->
         </body>
       </html>
     `);
