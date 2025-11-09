@@ -1,0 +1,64 @@
+:root {
+  --redrose: #321b19;
+  --redderrose: #712b2a;
+  --wall: #626059;
+  --whiterose: #dee3e7;
+  --pinkrose: #c3b7b9;
+  --pinkshadow: #753239;
+  --leaf: #3b463d;
+  --leaf2: #454e4e;
+  --creamrose: #efede4;
+  --table: #352f29;
+  --purple: #513889;
+  --pink: #e4b3d0;
+  --periwinkle: #8d84bb;
+  --skyblue: #b2d9f6;
+}
+
+* {
+  background-color: var(--creamrose);
+}
+
+::selection {
+  background-color: var(--redderrose);
+  color:var(--creamrose);
+}
+
+h1 {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+p {
+  margin: 0;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  height: 350px;
+}
+
+
+a {
+  color: var(--redderrose);
+}
+
+a:hover {
+  color: var(--leaf2);
+}
+
+
+body {
+  color: var(--leaf);
+  margin: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 2rem;
+  gap: 1rem;
+}

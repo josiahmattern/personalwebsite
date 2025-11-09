@@ -41,7 +41,7 @@ app.get('/blog', (_req, res) => {
         <body class="blog">
           <h1>blog posts</h1>
 					<p>coming soon...</p>
-          <!-- <ul>${fileLinks}</ul> -->
+          <ul>${fileLinks}</ul>
         </body>
       </html>
     `);
