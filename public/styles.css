@@ -32,12 +32,18 @@
   padding: 2rem;
   gap: 1rem;
 }
+h1 {
+	margin: 0;
+	margin-bottom: 1rem;
+}
 .blog h1 {
   margin: 0;
 }
 .blog p {
   margin: 0;
 }
+
+
 
 
 ul {
@@ -47,8 +53,15 @@ ul {
 }
 
 img {
-  height: 350px;
+  height: 375px;
 }
+
+@media (max-width: 400px) {
+  img {
+    height: 300px;
+  }
+}
+
 
 
 a {
